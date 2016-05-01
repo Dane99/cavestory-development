@@ -11,7 +11,7 @@ class Graphics;
  * Holds logic for animating sprites
  */
 
-class AnimatedSprite : Sprite{
+class AnimatedSprite : public Sprite{
 public:
 	AnimatedSprite();
 	AnimatedSprite(Graphics &graphics, const std::string &filePath, int sourceX, int sourceY, int width, int height,
@@ -32,10 +32,6 @@ public:
 	 */
 	void draw(Graphics &graphics, int x, int y);
 
-	/* void setupAnimation
-	 * A required function that sets up all the animations for a sprite
-	 */
-	virtual void setupAnimations();
 
 protected:
 	double _timeToUpdate; //amount of time between frames
@@ -66,7 +62,12 @@ protected:
 	/* void animationDone
 	 * Logic that happens when an animation ends
 	 */
-	virtual void animationDone(std::string currentAnimation);
+	virtual void animationDone(std::string currentAnimation) = 0;
+
+	/* void setupAnimation
+	 * A required function that sets up all the animations for a sprite
+	 */
+	virtual void setupAnimations() = 0;
 
 
 private:

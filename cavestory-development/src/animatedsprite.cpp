@@ -70,7 +70,7 @@ void AnimatedSprite::update(int elapsedTime) {
 	}
 }
 
-void AnimatedSprite::draw(Graphics &graphics, int x, int y) {
+void AnimatedSprite::draw(Graphics &graphics, int x, int y){
 	if (this->_visible) {
 		SDL_Rect destinationRectangle;
 		destinationRectangle.x = x + this->_offsets[this->_currentAnimation].x;
@@ -87,7 +87,4 @@ void AnimatedSprite::animationDone(std::string currentAnimation) {
 
 }
 
-void AnimatedSprite::setupAnimations() {
-	this->addAnimation(3, 0, 0, "RunLeft", 16, 16, Vector2(0, 0));
-	this->addAnimation(3, 0, 16, "RunRight", 16, 16, Vector2(0, 0));
-}
+
