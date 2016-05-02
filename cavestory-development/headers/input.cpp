@@ -39,7 +39,7 @@ bool Input::wasKeyReleased(SDL_Scancode key)
 }
 
 // Checks if a certain key is currently being held
-bool Input::wasKeyHeld(SDL_Scancode key)
+bool Input::isKeyHeld(SDL_Scancode key)
 {
 	return this->_heldKeys[key];
 }
