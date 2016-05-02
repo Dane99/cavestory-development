@@ -74,7 +74,7 @@ private:
 	std::map<std::string, std::vector<SDL_Rect>> _animations; // holds all animations
 	std::map<std::string, Vector2> _offsets;
 
-	int _frameIndex;
-	double _timeElapsed;
+	int _frameIndex; // amount of frames in the current animation
+	double _timeElapsed; // time that has elapsed since the last frame
 	bool _visible; // whether or not animation is visible
 };

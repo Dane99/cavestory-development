@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="headers\input.cpp" />
+    <ClCompile Include="src\input.cpp" />
     <ClCompile Include="src\player.cpp" />
     <ClCompile Include="src\animatedsprite.cpp" />
     <ClCompile Include="src\game.cpp" />
